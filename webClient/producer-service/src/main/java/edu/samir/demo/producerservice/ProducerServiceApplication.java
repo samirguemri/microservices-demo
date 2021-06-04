@@ -1,13 +1,13 @@
-package edu.samir.demo.webclient;
+package edu.samir.demo.producerservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WebClientApplication {
+public class ProducerServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebClientApplication.class, args);
+        SpringApplication.run(ProducerServiceApplication.class, args);
     }
 
 }

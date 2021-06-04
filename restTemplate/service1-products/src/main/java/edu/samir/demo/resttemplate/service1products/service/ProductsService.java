@@ -20,11 +20,11 @@ public class ProductsService {
 
     @Autowired
     public ProductsService(RestTemplateBuilder builder) {
-        this.restTemplate = builder.build();
+        this.restTemplate = builder.rootUri("http://localhost:9090/api").build();
     }
 
     public Invoice createInvoice(List<Product> products) throws URISyntaxException {
         HttpEntity<List<Product>> body = new HttpEntity<>(products);
-        return restTemplate.postForObject(new URI(BASE_URI + "/invoice"), body, Invoice.class);
+        return restTemplate.postForObject("/invoice", body, Invoice.class);
     }
 }
